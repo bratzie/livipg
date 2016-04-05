@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+<style type="text/css">
+	.Half_x0020_Highlight_x0020_Blue{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:1;}
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#060606;}
+	.st2{fill:#010101;}
+	.st3{opacity:0.3;fill:#060606;}
+	.st4{fill:url(#SVGID_2_);}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:url(#SVGID_3_);}
+	.st7{fill:url(#SVGID_4_);}
+	.st8{fill:url(#SVGID_5_);}
+	.st9{fill:url(#SVGID_6_);}
+	.st10{fill:#040404;}
+	.st11{fill:#30B454;}
+	.st12{fill:#F89A1D;}
+	.st13{opacity:0.5;}
+	.st14{fill:none;}
+	.st15{fill:#010101;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st16{fill:#939598;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-935.43" y1="-947" x2="-935.43" y2="-948">
+	<stop  offset="0" style="stop-color:#2D409A"/>
+	<stop  offset="0.618" style="stop-color:#2A3282"/>
+	<stop  offset="0.6292" style="stop-color:#2A3592"/>
+	<stop  offset="0.9831" style="stop-color:#0063A0"/>
+</linearGradient>
+<g id="Layer_1">
+	<g id="RSS_-_Grey">
+		<g id="Reload_-_Orange">
+			<g id="Hand">
+			</g>
+		</g>
+		<g id="Layer_13">
+		</g>
+	</g>
+	<g id="Info">
+		<g id="Delete">
+		</g>
+		<g id="Check">
+			<g id="Help">
+				<g id="Add_Favorite">
+					<g id="Favorite">
+						<g id="Photo">
+							<g id="Zoom_In">
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Battery_half_full">
+	<path id="battery_back" class="st16" d="M198.7,66h-21.8V54.3c0-7.4-6-13.4-13.4-13.4h-41.9c-7.4,0-13.4,6-13.4,13.4V66H84.8
+		c-7.4,0-13.4,6-13.4,13.4v162.5c0,0.2,0.1,0.4,0.1,0.6H212c0-0.2,0.1-0.4,0.1-0.6V79.4C212.1,72.1,206.1,66,198.7,66z M112.2,230
+		h2.8l-4.4,5.3L112.2,230z"/>
+	<rect id="fill" x="77.7" y="155.9" class="st5" width="128.4" height="81.9"/>
+	<polygon id="lightning" points="122.5,212.9 180.8,141.7 139.8,138.1 168.5,92.8 114.6,92.8 103.1,147.5 141.9,147.5 	"/>
+</g>
+</svg>

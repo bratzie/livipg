@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+<style type="text/css">
+	.Half_x0020_Highlight_x0020_Blue{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:1;}
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#060606;}
+	.st3{opacity:0.3;fill:#060606;}
+	.st4{fill:#30B454;}
+	.st5{opacity:0.5;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1247.24" y1="-2925.9512" x2="-1247.24" y2="-2926.9512">
+	<stop  offset="0" style="stop-color:#2D409A"/>
+	<stop  offset="0.618" style="stop-color:#2A3282"/>
+	<stop  offset="0.6292" style="stop-color:#2A3592"/>
+	<stop  offset="0.9831" style="stop-color:#0063A0"/>
+</linearGradient>
+<g id="RSS_-_Grey">
+	<g id="Reload_-_Orange">
+		<g id="Hand">
+		</g>
+	</g>
+</g>
+<g id="Info">
+	<g id="Delete">
+	</g>
+	<g id="Check">
+		<g id="Help">
+			<g id="Add_Favorite">
+				<g id="Favorite">
+					<g id="Photo">
+						<g id="Zoom_In">
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<path class="st1" d="M141.7,42.5v116.3c-6.5-3.7-14-6.1-22-6.1c-24.4,0-44.1,19.7-44.1,44.1s19.7,44.1,44.1,44.1
+	s44.1-19.7,44.1-44.1V86.6h44.1V42.5H141.7z"/>
+</svg>
