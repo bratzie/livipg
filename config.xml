@@ -21,8 +21,7 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
-    <preference name="orientation" value="landscape" />
-    <preference name="fullscreen" value="true" />
+    <preference name="orientation"                value="landscape" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
 
@@ -77,6 +76,7 @@
         <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
     </platform>
 
+<!--
     <platform name="ios">
         <icon   src="res/icon/ios/icon.png"                         platform="ios" width="57"   height="57" />
         <icon   src="res/icon/ios/icon@2x.png"                      platform="ios" width="114"  height="114" />
@@ -105,6 +105,7 @@
         <splash src="res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
     </platform>
+-->
 
     <platform name="wp8">
         <icon   src="res/icon/wp8/ApplicationIcon.png"   platform="wp8" width="99"  height="99" />

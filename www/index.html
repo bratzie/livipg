@@ -31,7 +31,7 @@
           </div>
           <div id="bottom-bar">
             <span></span>
-            <span></span>
+            <span id="deviceready"><span class="received">Ready!</span><span class="listening">Listening...</span></span>
             <span></span>
           </div>
         </div>
@@ -178,8 +178,11 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/mockup.js"></script>
+<!--  <script type="text/javascript" src="js/mockup.js"></script>-->
+  <script type="text/javascript" src="js/index.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9zuGGiGtmWph-aqTL5fWmv66Bi2tW1is&callback=initMap" async defer></script>
 </body>
-
+<script type="text/javascript">
+  app.initialize();
+</script>
 </html>
