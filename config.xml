@@ -106,14 +106,12 @@
         <splash src="res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
     </platform>
 -->
-<!--
 
     <platform name="wp8">
         <icon   src="res/icon/wp8/ApplicationIcon.png"   platform="wp8" width="99"  height="99" />
         <icon   src="res/icon/wp8/Background.png"        platform="wp8" width="159" height="159" />
         <splash src="res/screen/wp8/screen-portrait.jpg" platform="wp8" width="768" height="1280" />
     </platform>
--->
 
     <platform name="windows">
         <!-- For Windows the recommended approach to define app icons is to use target attribute -->
@@ -169,12 +167,10 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-<!--
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
--->
 
 </widget>
