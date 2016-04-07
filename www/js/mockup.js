@@ -4,6 +4,8 @@ var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
 
 var LOG_STUFF = false;
 
+console.log("OH SHIT, IT'S LOADED");
+
 /* Functions to cycle lists */
 $.fn.cycleToLast = function() {
   if($(this).children(':first-child')) {
