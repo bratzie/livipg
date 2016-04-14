@@ -50,6 +50,9 @@
     <plugin name="cordova-plugin-statusbar"           source="npm" />
     <plugin name="cordova-plugin-vibration"           source="npm" />
     <plugin name="cordova-plugin-whitelist"           source="npm" version="1" />
+    
+    <!-- Bluetooth -->
+    <plugin name="org.bcsphere.bluetooth" spec="0.5.1" source="pgb" />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />

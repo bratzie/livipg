@@ -32,6 +32,8 @@ var app = {
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
     document.addEventListener('online', this.onOnline, false);
+    document.addEventListener('bcready', this.onBCReady, false);
+    document.addEventListener('bccoreready', this.onBCCoreReady, false);
   },
   // deviceready Event Handler
   //
@@ -44,6 +46,15 @@ var app = {
   onOnline: function() {
     app.receivedEvent('deviceready');
     console.log("Online");
+  },
+  onBCReady: function() {
+    alert("BC is ready now! you can process UI event here");
+  },
+  onBCCoreReady: function() {
+    var eventName = "org.bcsphere.ibeacon.ready";
+	var iBeaconManager = BC.iBeaconManager = new BC.IBeaconManager("org.bcsphere.ibeacon", eventName);
+	//plugin is ready, fire the event.
+	BC.bluetooth.dispatchEvent(eventName);
   },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
@@ -72,7 +83,7 @@ $.fn.cycleToLast = function() {
     $(this).children(':first-child').appendTo($(this)); 
   }
   return this;
-}
+};
 
 $.fn.animateToLast = function() {
   $(this).children(':first-child').hide(
@@ -82,14 +93,14 @@ $.fn.animateToLast = function() {
     }
   );
   return this;
-}
+};
 
 $.fn.cycleToFirst = function() {
   if($(this).children(':first-child')) {
     $(this).children(':last-child').prependTo($(this));
   }
   return this;
-}
+};
 
 $.fn.animateToFirst = function() {
   $(this).children(':last-child').hide(
@@ -99,15 +110,15 @@ $.fn.animateToFirst = function() {
     }
   );
   return this;
-}
+};
 
 $.fn.setAsActiveTrack = function() {
   at = $(this);
-  at.addClass('active-track')
+  at.addClass('active-track');
   $('#mc-artist').html(at.attr('data-artist'));
   $('#mc-song').html(at.attr('data-song'));
   return this;
-}
+};
 
 /* Misc */
 function log(string) {
@@ -135,10 +146,10 @@ function startTime() {
     gpsh++;
     gpsm -= 60;
   }
-  gpsm = checkTime(gpsm)
+  gpsm = checkTime(gpsm);
   $('#gps-time').html(gpsh + ":" + gpsm);
   t = setTimeout(function () {
-    startTime()
+    startTime();
   }, 30000);
 }
 
@@ -244,7 +255,6 @@ function selectPreviousContact() {
 }
 
 function togglePhonecall() {
-  $()
   if (activeCall) {
 
   }
@@ -274,7 +284,7 @@ function initMap() {
   });
   map.set('styles', [
     {"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"},{"weight":"0.20"},{"lightness":"28"},{"saturation":"23"},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#494949"},{"lightness":13},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}
-  ])
+  ]);
 }
 
 /* Music */
@@ -526,9 +536,9 @@ function accellerate() {
   var newSpeed;
 
   if (speed > 50) {
-    newSpeed = Math.floor(speed*=1.04)
+    newSpeed = Math.floor(speed*=1.04);
   } else if (speed > 20) {
-    newSpeed = Math.floor(speed*=1.08)
+    newSpeed = Math.floor(speed*=1.08);
   } else {
     newSpeed = speed + 2;
   }
@@ -545,16 +555,16 @@ function decellerate() {
     // do nothing
   } else {
     if (speed > 60) {
-      speed = Math.floor(speed*=0.98)
+      speed = Math.floor(speed*=0.98);
     } else if (speed > 20) {
-      speed = Math.floor(speed*=0.95)
+      speed = Math.floor(speed*=0.95);
     } else if (speed > 0) {
       speed -= 1;
     }
     setSpeed(speed);
   }
   t = setTimeout(function () {
-    decellerate()
+    decellerate();
   }, 200);
 }
 
@@ -582,7 +592,7 @@ function setSpeed(speed) {
   var rotation = Math.floor((speed/120) * 136.5);
   var fill_rotation = rotation;
   var fix_rotation = rotation * 2;
-  for(i in transform_styles) {
+  for(var i in transform_styles) {
     $('#sd-progress .circle .fill, .circle .mask.full').css(transform_styles[i], 'rotate(' + fill_rotation + 'deg)');
     $('.circle .fill.fix').css(transform_styles[i], 'rotate(' + fix_rotation + 'deg)');
   }
@@ -611,16 +621,16 @@ function initialize() {
   $('#speed-dial').on('touchend', function() {
   } );
 
-  $('#menu-calls').click(function() { activateCalls() } );
-  $('#menu-navigation').click(function() { activateNavigation() } );
-  $('#menu-music').click(function() { activateMusic() } );
+  $('#menu-calls').click(function() { activateCalls(); } );
+  $('#menu-navigation').click(function() { activateNavigation(); } );
+  $('#menu-music').click(function() { activateMusic(); } );
 
-  $('#next-song').click(function() { selectPreviousTrack() } );
-  $('#prev-song').click(function() { selectNextTrack() } );
+  $('#next-song').click(function() { selectPreviousTrack(); } );
+  $('#prev-song').click(function() { selectNextTrack(); } );
 
-  $('#next-contact').click(function() { selectPreviousContact() } );
-  $('#prev-contact').click(function() { selectNextContact() } );
+  $('#next-contact').click(function() { selectPreviousContact(); } );
+  $('#prev-contact').click(function() { selectNextContact(); } );
 
-  $('#music .view-header').click(function() { selectNextPlaylist() } );
+  $('#music .view-header').click(function() { selectNextPlaylist(); } );
 
 }
