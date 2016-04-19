@@ -51,8 +51,7 @@
     <plugin name="cordova-plugin-vibration"           source="npm" />
     <plugin name="cordova-plugin-whitelist"           source="npm" version="1" />
     
-    <!-- Bluetooth -->
-    <plugin name="org.bcsphere.bluetooth" spec="0.5.1" source="pgb" />
+    <plugin name="com.arcoirislabs.plugin.mqtt"></plugin>
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />

@@ -687,3 +687,16 @@ body, html {
 .received {
   display: none;
 }
+
+/* MQTT */
+section {
+  position: absolute;
+  display: block;
+  z-index: 200;
+  background-color: white;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

@@ -1,3 +1,4 @@
+/*global: $*/
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -32,8 +33,6 @@ var app = {
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
     document.addEventListener('online', this.onOnline, false);
-    document.addEventListener('bcready', this.onBCReady, false);
-    document.addEventListener('bccoreready', this.onBCCoreReady, false);
   },
   // deviceready Event Handler
   //
@@ -47,17 +46,44 @@ var app = {
     app.receivedEvent('deviceready');
     console.log("Online");
   },
-  onBCReady: function() {
-    alert("BC is ready now! you can process UI event here");
-  },
-  onBCCoreReady: function() {
-    var eventName = "org.bcsphere.ibeacon.ready";
-	var iBeaconManager = BC.iBeaconManager = new BC.IBeaconManager("org.bcsphere.ibeacon", eventName);
-	//plugin is ready, fire the event.
-	BC.bluetooth.dispatchEvent(eventName);
-  },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
+    document.getElementById("connect").addEventListener('touchend',function(ev){
+            phonegap.plugins.CordovaMqTTPlugin.connect({
+                url: "192.168.43.144",
+                port: "1883",
+                clientId: "Hej",
+                success:function(s){
+                    connect = true;
+                    console.log(JSON.stringify(s));
+                },
+                error:function(e){
+                    connect = false;
+                    console.log(e);
+                },
+                onConnectionLost:function (){
+                  connect = false;
+                  console.log('Disconnected from server.');
+                  // TODO reconnect
+                }
+            });
+        });
+        document.getElementById("subscribe").addEventListener('touchend',function(ev){
+            if (!connect) {
+              alert("First establish connection then try to subscribe");
+            } else {
+              phonegap.plugins.CordovaMqTTPlugin.subscribe({
+                topic: "/wheel/gestures/front/rightside/swipe/#",
+                qos: 0,
+                success:function(s){
+                  console.log(s);
+                },
+                error:function(e){
+                  console.log(e);
+                }
+              });
+            }                
+        });
     var parentElement = document.getElementById(id);
     var listeningElement = parentElement.querySelector('.listening');
     var receivedElement = parentElement.querySelector('.received');
@@ -66,10 +92,31 @@ var app = {
     receivedElement.setAttribute('style', 'display:inline;');
     
     initialize();
+    initMqtt();
 
     console.log('Received Event: ' + id);
   }
 };
+  
+function initMqtt() {
+  mqtt.subscribe({
+    url: "192.168.43.144",
+    port: "1883",
+    topic: "/wheel/gestures/front/rightside/swipe/#",
+    secure: false,
+    qos: "",
+    cleanSession: true/false,
+    username: "",
+    password: "",
+    debug: true,
+    success: function(data) {
+      console.log(data);
+    },
+    error:function(data){
+      console.log(data);
+    }
+  });
+}
 
 var state = "calls", selector, gps = false, accellerating = false, activeCall = false, speedDial, speedValue, sdFill, sdFix, selectInProgress = false, warning, device, progress;
 
