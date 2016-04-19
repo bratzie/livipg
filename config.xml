@@ -21,7 +21,8 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
-    <preference name="fullscreen"                 value="true" />
+    <preference name="Fullscreen"                 value="true" />
+    <preference name="Orientation"                value="landscape" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
 
@@ -51,7 +52,7 @@
     <plugin name="cordova-plugin-vibration"           source="npm" />
     <plugin name="cordova-plugin-whitelist"           source="npm" version="1" />
     
-    <plugin name="com.arcoirislabs.plugin.mqtt"></plugin>
+    <plugin name="cordova-plugin-mqtt"                source="npm" />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />
