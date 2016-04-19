@@ -92,13 +92,12 @@ var app = {
     receivedElement.setAttribute('style', 'display:inline;');
     
     initialize();
-    initMqtt();
 
     console.log('Received Event: ' + id);
   }
 };
   
-function initMqtt() {
+function initMqtta() {
   mqtt.subscribe({
     url: "192.168.43.144",
     port: "1883",
