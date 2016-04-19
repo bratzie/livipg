@@ -49,7 +49,7 @@ var app = {
   // Update DOM on a Received Event
   receivedEvent: function(id) {
     document.getElementById("connect").addEventListener('touchend',function(ev){
-            phonegap.plugins.CordovaMqTTPlugin.connect({
+            cordova.plugins.CordovaMqTTPlugin.connect({
                 url: "192.168.43.144",
                 port: "1883",
                 clientId: "Hej",
@@ -72,7 +72,7 @@ var app = {
             if (!connect) {
               alert("First establish connection then try to subscribe");
             } else {
-              phonegap.plugins.CordovaMqTTPlugin.subscribe({
+              cordova.plugins.CordovaMqTTPlugin.subscribe({
                 topic: "/wheel/gestures/front/rightside/swipe/#",
                 qos: 0,
                 success:function(s){

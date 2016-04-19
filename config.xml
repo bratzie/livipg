@@ -52,7 +52,6 @@
     <plugin name="cordova-plugin-splashscreen"        source="npm" />
     <plugin name="cordova-plugin-statusbar"           source="npm" />
     <plugin name="cordova-plugin-vibration"           source="npm" />
-    <plugin name="cordova-plugin-whitelist"           source="npm" version="1" />
     
     <plugin name="cordova-plugin-mqtt"                source="npm" />
 
